@@ -17,11 +17,7 @@ include (${ROOT_DIR}/cmake/nlohmann.cmake)
 add_subdirectory(../dimbuilder ./dimbuilder)
 
 file(GLOB SRCS
-    writing/*.cpp
-    writing-filter/*.cpp
-    writing-kernel/*.cpp
-    writing-reader/*.cpp
-    writing-writer/*.cpp)
+    writing-kernel/*.cpp)
 
 add_library(dummy_lib OBJECT ${SRCS})
 add_dependencies(dummy_lib generate_dimension_hpp)
